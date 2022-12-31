@@ -1,0 +1,128 @@
+/*
+  Josh's Custom CSS Reset - Tweaked
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.5;
+    background-color: #313843;
+    -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+#root,
+#__next {
+    isolation: isolate;
+}
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+header {
+    padding: 1%;
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: #805572;
+}
+
+footer {
+    padding: 1%;
+    font-size: 2em;
+    width: 100%;
+    background-color: #3D4654;
+    text-align: center;
+}
+
+.display {
+    padding: 1%;
+    margin: 1%;
+    text-align: right;
+    font-size: 2em;
+    background-color: #2F3641;
+    border: 10px solid #465060;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container{
+    border: 6px solid #805572;
+    border-radius: 20px;
+    width: 320px;
+}
+
+hr {
+    color: #805572;
+    border: 2px solid #805572;
+}
+button {
+    height: 100%;
+    border: 1px solid #4C5768;
+    border-radius: 50px;
+    background-color: #4C5768;
+    padding: 10%;
+    font-size: 1.5em;
+}
+.zero {
+    grid-column: span 2;
+}
+.buttons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding: 1%;
+    gap: 2px;
+}
+button:hover {
+    filter: brightness(90%);
+    transition: all 200ms;
+}
