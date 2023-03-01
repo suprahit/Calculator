@@ -96,7 +96,15 @@ function ponto() {
 }
 
 // HONK
+Audio.prototype.stop = function () {
+    this.pause();
+    this.currentTime = 0;
+};
+
 function honk() {
+    if (audio.duration > 0 && !audio.paused) {
+        audio.stop();
+    }
     audio.play();
 }
 
